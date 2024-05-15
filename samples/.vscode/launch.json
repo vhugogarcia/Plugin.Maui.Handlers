@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Plugin (Android) (Debug)",
+            "type": "maui",
+            "request": "launch",
+            "configuration": "Debug",
+            "targetFramework": "net8.0-android",
+            "project": "${workspaceRoot}/Plugin.Maui.Handlers.Sample/Plugin.Maui.Handlers.Sample.csproj",
+            "preLaunchTask": "maui: Build"
+        },
+        {
+            "name": "Plugin (iOS) (Debug)",
+            "type": "maui",
+            "request": "launch",
+            "configuration": "Debug",
+            "targetFramework": "net8.0-ios",
+            "project": "${workspaceRoot}/Plugin.Maui.Handlers.Sample/Plugin.Maui.Handlers.Sample.csproj",
+            "preLaunchTask": "maui: Build"
+        },
+        {
+            "name": "Plugin (macOS) (Debug)",
+            "type": "maui",
+            "request": "launch",
+            "configuration": "Debug",
+            "targetFramework": "net8.0-maccatalyst",
+            "project": "${workspaceRoot}/Plugin.Maui.Handlers.Sample/Plugin.Maui.Handlers.Sample.csproj",
+            "preLaunchTask": "maui: Build"
+        },
+        {
+            "name": "Plugin (Windows) (Debug)",
+            "type": "maui",
+            "request": "launch",
+            "configuration": "Debug",
+            "targetFramework": "net8.0-windows10.0.19041.0",
+            "project": "${workspaceRoot}/Plugin.Maui.Handlers.Sample/Plugin.Maui.Handlers.Sample.csproj",
+            "preLaunchTask": "maui: Build"
+        },
+    ]
+}

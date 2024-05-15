@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Plugin.Maui.Handlers.Sample.MainPage"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="False"
+             Padding="20"
+             BackgroundColor="White"
+             Title="Plugin Maui Handlers">
+
+    <VerticalStackLayout
+        Spacing="20">
+        <Border
+            Stroke="#ededed"
+            StrokeThickness="4"
+            Background="#ededed"
+            Padding="16,8"
+            HorizontalOptions="Center">
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="20" />
+        </Border.StrokeShape>
+        <Entry 
+            x:Name="entry"
+            Placeholder="Lorem Ipsum"
+            BackgroundColor="Transparent"
+            ClearButtonVisibility="WhileEditing"
+            TextTransform="Uppercase"
+            Text="I'm an Entry Control" />
+        </Border>
+
+        <Border
+            Stroke="#ededed"
+            StrokeThickness="4"
+            Background="#ededed"
+            Padding="16,8"
+            HorizontalOptions="Center">
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="20" />
+        </Border.StrokeShape>
+        <Editor 
+            x:Name="editor"
+            BackgroundColor="Transparent"
+            Placeholder="I'm an Editor Control"
+            WidthRequest="300"
+            HeightRequest="150"/>
+        </Border>
+
+        <Border
+            Stroke="#ededed"
+            StrokeThickness="4"
+            Background="#ededed"
+            Padding="16,8"
+            HorizontalOptions="Center">
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="20" />
+        </Border.StrokeShape>
+        <Picker 
+            x:Name="picker"
+            BackgroundColor="Transparent"
+            Title="I'm a Picker Control">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Baboon</x:String>
+                    <x:String>Capuchin Monkey</x:String>
+                    <x:String>Blue Monkey</x:String>
+                    <x:String>Squirrel Monkey</x:String>
+                    <x:String>Golden Lion Tamarin</x:String>
+                    <x:String>Howler Monkey</x:String>
+                    <x:String>Japanese Macaque</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        </Border>
+    </VerticalStackLayout>
+
+</ContentPage>
