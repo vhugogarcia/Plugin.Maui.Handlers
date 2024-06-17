@@ -1,15 +1,30 @@
-﻿namespace Plugin.Maui.Handlers;
+﻿using Microsoft.Maui.Controls.Compatibility.Platform.Android;
+
+namespace Plugin.Maui.Handlers;
 
 partial class EditorHandler
 {
+    /// <summary>
+    /// Removes the borders of the <see cref="Editor"/> control
+    /// </summary>
+    public static void RemoveBorders()
+    {
+        Microsoft.Maui.Handlers.EditorHandler.Mapper.AppendToMapping("Borderless", (handler, view) =>
+        {
+            handler.PlatformView.Background = null;
+            handler.PlatformView.SetBackgroundColor(Android.Graphics.Color.Transparent);
+            handler.PlatformView.BackgroundTintList = Android.Content.Res.ColorStateList.ValueOf(Colors.Transparent.ToAndroid());
+        });
+    }
+
 	/// <summary>
-    /// Removes the borders of the <see cref="Entry"/> control
+    /// Enables de scrolling of the <see cref="Editor"/> control
     /// </summary>
     public static void EnableScrolling()
     {
         Microsoft.Maui.Handlers.EditorHandler.Mapper.AppendToMapping("Scrolling", (handler, view) =>
         {
-
+            // Not needed for Android
         });
     }
 
@@ -23,7 +38,7 @@ partial class EditorHandler
 
         Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("Done", (handler, view) =>
         {
-
+            // Not needed for Android
     	});
     }
 }

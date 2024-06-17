@@ -6,4 +6,9 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    async void OnHideKeyboardClicked(object sender, EventArgs args)
+    {
+       UtilHandler.HideKeyboard();
+    }
 }

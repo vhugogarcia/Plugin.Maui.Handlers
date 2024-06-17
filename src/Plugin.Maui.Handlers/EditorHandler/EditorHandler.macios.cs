@@ -11,6 +11,17 @@ namespace Plugin.Maui.Handlers;
 partial class EditorHandler
 {
     /// <summary>
+    /// Removes the borders of the <see cref="Editor"/> control
+    /// </summary>
+    public static void RemoveBorders()
+    {
+        Microsoft.Maui.Handlers.EditorHandler.Mapper.AppendToMapping("Borderless", (handler, view) =>
+        {
+            // Not needed for iOS
+        });
+    }
+
+    /// <summary>
     /// Enables the scrolling of the <see cref="Editor"/> control
     /// </summary>
     public static void EnableScrolling()

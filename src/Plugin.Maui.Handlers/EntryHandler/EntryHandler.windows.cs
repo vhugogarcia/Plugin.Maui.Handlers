@@ -9,7 +9,7 @@ partial class EntryHandler
     {
         Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("Borderless", (handler, view) =>
         {
-
+            // Not needed for Windows
         });
     }
 
@@ -23,7 +23,7 @@ partial class EntryHandler
 
         Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("Done", (handler, view) =>
         {
-
+            // Not needed for Windows
     	});
     }
 }

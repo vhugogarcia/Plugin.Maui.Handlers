@@ -21,6 +21,7 @@ public static class MauiProgram
 		EntryHandler.RemoveBorders();
 		EntryHandler.AddDone(Color.FromArgb("#000000"));
 
+        EditorHandler.RemoveBorders();
 		EditorHandler.EnableScrolling();
 		EditorHandler.AddDone(null);
 

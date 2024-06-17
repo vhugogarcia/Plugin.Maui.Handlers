@@ -1,54 +1,46 @@
-# Plugin.Maui.Feature Template
+# .NET MAUI Plugin: Custom Handlers and Utilities
 
-The `Plugin.Maui.Feature` repository is a template repository that can be used to bootstrap your own .NET MAUI plugin project. You can use this project structure as a blueprint for your own work.
+## Overview
 
-Learn how to get started with your plugin in this [YouTube video](https://www.youtube.com/watch?v=ZCQrlGT7MhI&list=PLfbOp004UaYVgzmTBNVI0ql2qF0LhSEU1&index=27).
+This .NET MAUI plugin provides enhanced functionality for handling user interactions with Entry and Editor controls, along with additional utilities such as hiding the keyboard programmatically.
+ 
+ It helps you to remove the unnecessary native UI elements of the mentioned controls allowing you to customize input design and enhances user experience in your .NET MAUI applications.
 
-This template contains:
+## Features
 
-- A [sample .NET MAUI app](samples) where you can demonstrate how your plugin works and test your plugin with while developing
-- The [source](src) of the plugin
-- A boilerplate [README file](README_Feature.md) you can use (don't forget to rename to `README.md` and remove this one!)
-- [GitHub Actions for CI](.github/workflows) of the library and the sample app
-- [GitHub Action for releasing](.github/workflows) your package to NuGet
-- A [generic icon](nuget.png) for your project, feel free to adapt and be creative!
-- A [.editorconfig](.editorconfig) file to standardize the code syntax. Feel free to adapt or remove.
-- The [LICENSE](LICENSE) file with the MIT license. If you want this to be different, please change it. At the very least add your name in there!
+### Entry
+- **Remove Borders**, this method removes the borders of the entry for iOS and Android.
+- **Add Done Button**, this method add a "Done" button toolbar above the keyboard on iOS only.
+#### Example Usage
+```csharp
+EntryHandler.RemoveBorders();
 
-## Getting Started
+// The toolbar background default color is #FFFFFF 
+EntryHandler.AddDone(Color.FromArgb("#000000"));
+```
 
-1. Create your own GitHub repository from this one by clicking the "Use this template" button and then "Create a new repository". More information in the [documentation](https://docs.github.com/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template). After that, clone the repo to your local machine.
+### Editor
+- **Remove Borders**, this method removes the borders of the entry for iOS and Android.
+- **Add Done Button**, this method add a "Done" button toolbar above the keyboard on iOS only.
+- **Enable scrolling**, this method enables the scrolling on editor control for iOS only.
+#### Example Usage
+```csharp
+    EditorHandler.RemoveBorders();
 
-2. Replace all occurrences of `Plugin.Maui.Feature` with whatever your feature or functionality will be. For instance: `Plugin.Maui.ScreenBrightness` or `Plugin.Maui.Audio`. Of course the name can be anything, but to make it more discoverable it could be a great choice to stick to this naming scheme. You can easily do this with your favorite text-editor and do a replace all on all files.
+     // The toolbar background default color is #FFFFFF 
+    EditorHandler.AddDone(null);
+    EditorHandler.EnableScrolling();
+```
 
-   2.1 Don't forget to also rename the files and folders on your filesystem.
+### Utilities
+- **Hide Keyboard**, this method forces to hide the keyboard on iOS and Android.
 
-3. In the csproj file of the plugin project (under `src`), make sure that you replace all relevant values to your project. This means the author of this project, the description of the project, the target framework (.NET 7, 8 or something else). If you don't want to or can't support a certain platform, remove that target platform altogether.
+#### Example Usage
+```csharp
+UtilHandler.HideKeyboard();
+```
 
-4. Delete this `README.md` file and rename `README_Feature.md` to `README.md`. Fill that README file with all the relevant details of your project.
+## Thank You!
+So if you enjoy this plugin, please consider supporting my contribution via Github sponsorship https://github.com/sponsors/vhugogarcia and follow me on my personal blog (https://dev.to/vhugogarcia) where I keep posting .NET MAUI useful guides and tricks.
 
-5. Check the LICENSE file if this reflects the license that you want to distribute your project under. At the very least add your name there and the current year we live in.
 
-6. Create a nice icon in the `nuget.png` file that will show up on nuget.org and in the NuGet manager in Visual Studio.
-
-7. Write your plugin code (under `src`) and add samples to the .NET MAUI sample app (under `samples` folder)
-
-8. Make super sure that your package won't show up as `Plugin.Maui.Feature` on NuGet! If one does, you owe me a drink!
-
-9. Publish your package to NuGet, a nice guide to do that can be found [here](https://learn.microsoft.com/nuget/nuget-org/publish-a-package). Also see [Publish to NuGet](#publish-to-nuget) below.
-
-10. Enjoy life as a .NET MAUI plugin author! ✨
-
-As an example of all of this you can have a look at:
-
-- [Plugin.Maui.Audio](https://github.com/jfversluis/Plugin.Maui.Audio)
-- [Plugin.Maui.Pedometer](https://github.com/jfversluis/Plugin.Maui.Pedometer)
-- [Plugin.Maui.ScreenBrightness](https://github.com/jfversluis/Plugin.Maui.ScreenBrightness)
-
-## Publish to NuGet
-
-If you want to publish your package to NuGet, you totally can! Included in this template are a couple of GitHub Actions. One of them goes of when you create a new tag with this pattern: `v1.0.0` or `v1.0.0-preview1`. Obviously the `1.0.0` part can be determined by you as you see fit, as long as you follow the pattern of 3 integers separated by dots.
-
-You will also want to set a secret for this repository which contains your NuGet API key. Follow the documentation on that [here](https://docs.github.com/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository), and add a secret with the key `NUGET_API_KEY` and value of your NuGet API key. The API key should be authorized to push a NuGet package with the given identifier. 
-
-From there, after [creating a GitHub release](https://docs.github.com/repositories/releasing-projects-on-github/managing-releases-in-a-repository) your plugin will be automatically released on NuGet!

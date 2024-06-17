@@ -84,6 +84,7 @@
 	<ItemGroup>
 	  <None Remove="EntryHandler\" />
 	  <None Remove="EditorHandler\" />
+      <None Remove="UtilHandler\" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="..\..\nuget.png" PackagePath="icon.png" Pack="true" />
@@ -93,5 +94,6 @@
 	<ItemGroup>
 	  <Folder Include="EntryHandler\" />
 	  <Folder Include="EditorHandler\" />
+	  <Folder Include="UtilHandler/" />
 	</ItemGroup>
 </Project>
