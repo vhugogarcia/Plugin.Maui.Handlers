@@ -17,6 +17,7 @@ partial class EntryHandler
     {
         Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("Borderless", (handler, view) =>
         {
+             handler.PlatformView.BackgroundColor = UIKit.UIColor.Clear;
             handler.PlatformView.Layer.BorderWidth = 0;
             handler.PlatformView.BorderStyle = UITextBorderStyle.None;
         });
@@ -34,7 +35,8 @@ partial class EntryHandler
         {
             var toolbar = new UIToolbar(new RectangleF(0.0f, 0.0f, 50.0f, 44.0f))
             {
-                BackgroundColor = toolbarBackgroundColor.ToPlatform()
+                BackgroundColor = toolbarBackgroundColor.ToPlatform(),
+                Translucent = true
             };
 
             var doneButton = new UIBarButtonItem(UIBarButtonSystemItem.Done, delegate
@@ -48,6 +50,14 @@ partial class EntryHandler
             };
 
             handler.PlatformView.InputAccessoryView = toolbar;
+        });
+    }
+
+    public static void SetFieldCursorColor()
+    {
+        Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("CursorColor", (handler, view) =>
+        {
+
         });
     }
 }

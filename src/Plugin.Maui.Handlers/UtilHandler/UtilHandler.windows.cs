@@ -9,4 +9,9 @@ partial class UtilHandler
     {
         
     }
+
+    public static void DisableWebViewBounce()
+    {
+
+    }
 }

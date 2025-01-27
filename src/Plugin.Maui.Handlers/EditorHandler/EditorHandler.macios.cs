@@ -45,7 +45,8 @@ partial class EditorHandler
         {
             var toolbar = new UIToolbar(new RectangleF(0.0f, 0.0f, 50.0f, 44.0f))
             {
-                BackgroundColor = toolbarBackgroundColor.ToPlatform()
+                BackgroundColor = toolbarBackgroundColor.ToPlatform(),
+                Translucent = true
             };
 
             var doneButton = new UIBarButtonItem(UIBarButtonSystemItem.Done, delegate

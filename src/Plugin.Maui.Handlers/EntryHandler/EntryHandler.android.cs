@@ -30,4 +30,19 @@ partial class EntryHandler
             // Not needed for Android
     	});
     }
+
+    public static void SetFieldCursorColor(Color cursorColor)
+    {
+        cursorColor ??= Color.FromArgb("#CCCCCC");
+
+        Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("CursorColor", (handler, view) =>
+        {
+#if ANDROID
+            if (OperatingSystem.IsAndroidVersionAtLeast(29))
+            {
+                handler.PlatformView.TextCursorDrawable.SetTint(cursorColor.ToAndroid());
+            }
+#endif
+        });
+    }
 }

@@ -18,4 +18,9 @@ partial class UtilHandler
             Microsoft.Maui.ApplicationModel.Platform.CurrentActivity.CurrentFocus.ClearFocus();
         }
     }
+
+    public static void DisableWebViewBounce()
+    {
+
+    }
 }
