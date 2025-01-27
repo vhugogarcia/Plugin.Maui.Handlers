@@ -40,6 +40,9 @@ partial class EntryHandler
 #if ANDROID
             if (OperatingSystem.IsAndroidVersionAtLeast(29))
             {
+                if (handler.PlatformView.TextCursorDrawable is null)
+                    return;
+
                 handler.PlatformView.TextCursorDrawable.SetTint(cursorColor.ToAndroid());
             }
 #endif

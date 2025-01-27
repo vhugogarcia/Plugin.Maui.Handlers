@@ -7,8 +7,8 @@
 		<UseMaui>true</UseMaui>
 		<MauiVersion>9.0.30</MauiVersion>
 
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.5</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">25.0</SupportedOSPlatformVersion>
 
 		<!-- NuGet -->
 		<Authors>Victor Hugo Garcia Hernandez</Authors>
@@ -29,7 +29,7 @@
 		<DebugType>portable</DebugType>
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-        <Version>1.0.0</Version>
+        <Version>1.1.0</Version>
 	</PropertyGroup>
 
 	<!-- iOS & MacCatalyst -->
