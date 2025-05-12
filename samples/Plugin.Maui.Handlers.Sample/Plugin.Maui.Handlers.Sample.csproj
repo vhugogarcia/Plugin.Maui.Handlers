@@ -9,7 +9,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <NoWarn>1998,8632,8602,8601,8622,8618, 8603, 8600, 8604, 8602</NoWarn>
-		<MauiVersion>9.0.30</MauiVersion>
+		<MauiVersion>9.0.60</MauiVersion>
 
 		<!-- Display name -->
 		<ApplicationTitle>Plugin Handlers</ApplicationTitle>

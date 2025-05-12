@@ -7,7 +7,7 @@ partial class PickerHandler
     /// </summary>
     public static void RemoveBorders()
     {
-        Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("Borderless", (handler, view) =>
+        Microsoft.Maui.Handlers.PickerHandler.Mapper.AppendToMapping("Borderless", (handler, view) =>
         {
             // Not needed for Windows
         });

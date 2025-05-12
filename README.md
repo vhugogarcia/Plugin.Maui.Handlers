@@ -2,7 +2,7 @@
 
 ## Overview
 
-This .NET MAUI plugin provides enhanced functionality for handling user interactions with Entry, Editor, and Picker controls, along with additional utilities such as hiding the keyboard programmatically.
+This .NET MAUI plugin provides enhanced functionality for handling user interactions with Entry, Editor, Date Picker and Picker controls, along with additional utilities such as hiding the keyboard programmatically.
 
 It helps you to remove the unnecessary native UI elements of the mentioned controls allowing you to customize input design and enhances user experience in your .NET MAUI applications.
 
@@ -18,6 +18,8 @@ It helps you to remove the unnecessary native UI elements of the mentioned contr
 | Add Done Button | ✅   |     |     |
 | Enable Scrolling | ✅   |     |     |
 | **Picker** |     |     |     |
+| Remove Borders | ✅   | ✅   |     |
+| **Date Picker** |     |     |     |
 | Remove Borders | ✅   | ✅   |     |
 | **Utilities** |     |     |     |
 | Hide Keyboard | ✅   | ✅   |     |
@@ -41,6 +43,9 @@ EditorHandler.RemoveBorders();
 
 // Removes the borders from the picker control
 PickerHandler.RemoveBorders();
+
+// Removes the borders from the date picker control
+DatePickerHandler.RemoveBorders();
 
 // Enables the vertical scrolling on the editor control
 EditorHandler.EnableScrolling();

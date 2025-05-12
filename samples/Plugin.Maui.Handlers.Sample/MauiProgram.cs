@@ -25,6 +25,10 @@ public static class MauiProgram
 		EditorHandler.EnableScrolling();
 		EditorHandler.AddDone(null);
 
+        PickerHandler.RemoveBorders();
+        
+        DatePickerHandler.RemoveBorders();
+
 		return builder.Build();
 	}
 }

@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Plugin.Maui.Handlers.Sample.MainPage"
-             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
-             ios:Page.UseSafeArea="False"
-             Padding="20"
-             BackgroundColor="White"
-             Title="Plugin Maui Handlers">
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Plugin.Maui.Handlers.Sample.MainPage"
+    xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+    ios:Page.UseSafeArea="False"
+    Padding="20"
+    BackgroundColor="White"
+    Title="Plugin Maui Handlers">
 
     <VerticalStackLayout
         Spacing="20">
@@ -52,7 +53,6 @@
                 HeightRequest="150"/>
         </Border>
 
-        <!--
         <Border
             Stroke="#ededed"
             StrokeThickness="4"
@@ -79,8 +79,22 @@
                 </Picker.ItemsSource>
             </Picker>
         </Border>
-        -->
-        
-    </VerticalStackLayout>
 
+        <Border
+            Stroke="#ededed"
+            StrokeThickness="4"
+            Background="#ededed"
+            Padding="16,8"
+            HorizontalOptions="Center">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20" />
+            </Border.StrokeShape>
+            <DatePicker 
+                x:Name="datePicker"
+                MinimumDate="01/01/2025"
+                MaximumDate="12/31/2025"
+                Date="09/14/2025" />
+        </Border>
+
+    </VerticalStackLayout>
 </ContentPage>

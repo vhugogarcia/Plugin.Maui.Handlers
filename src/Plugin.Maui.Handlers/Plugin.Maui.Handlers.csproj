@@ -5,7 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<UseMaui>true</UseMaui>
-		<MauiVersion>9.0.30</MauiVersion>
+		<MauiVersion>9.0.60</MauiVersion>
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.5</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">25.0</SupportedOSPlatformVersion>
@@ -29,7 +29,7 @@
 		<DebugType>portable</DebugType>
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-        <Version>1.1.0</Version>
+        <Version>1.2.0</Version>
 	</PropertyGroup>
 
 	<!-- iOS & MacCatalyst -->
@@ -90,5 +90,6 @@
 	  <Folder Include="EditorHandler\" />
 	  <Folder Include="PickerHandler/" />
 	  <Folder Include="UtilHandler/" />
+      <Folder Include="DatePickerHandler/" />
 	</ItemGroup>
 </Project>
