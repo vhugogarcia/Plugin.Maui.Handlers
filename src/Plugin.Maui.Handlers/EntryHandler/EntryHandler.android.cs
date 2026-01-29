@@ -21,7 +21,7 @@ partial class EntryHandler
     /// Adds a Done button to the <see cref="Entry"/> control
     /// <parameter>toolbarBackgroundColor</parameter> The color of the toolbar background
     /// </summary>
-    public static void AddDone(Color toolbarBackgroundColor)
+    public static void AddDone(Color? toolbarBackgroundColor = null, bool useTransparentToolbar = false)
     {
         toolbarBackgroundColor ??= Color.FromArgb("#FFFFFF");
 

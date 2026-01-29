@@ -25,14 +25,14 @@ partial class EditorHandler
     }
 
     /// <summary>
-    /// Adds a Done button to the <see cref="Entry"/> control
+    /// Adds a Done button to the <see cref="Editor"/> control
     /// <parameter>toolbarBackgroundColor</parameter> The color of the toolbar background
     /// </summary>
-    public static void AddDone(Color toolbarBackgroundColor)
+    public static void AddDone(Color? toolbarBackgroundColor = null, bool useTransparentToolbar = false)
     {
         toolbarBackgroundColor ??= Color.FromArgb("#FFFFFF");
 
-        Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("Done", (handler, view) =>
+        Microsoft.Maui.Handlers.EditorHandler.Mapper.AppendToMapping("Done", (handler, view) =>
         {
             // Not needed for Windows
     	});
