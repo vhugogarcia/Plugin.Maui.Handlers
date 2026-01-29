@@ -19,11 +19,11 @@ public static class MauiProgram
 		builder.Services.AddTransient<MainPage>();
 
 		EntryHandler.RemoveBorders();
-		EntryHandler.AddDone(Color.FromArgb("#000000"));
+		EntryHandler.AddDone(Color.FromArgb("#000000"), true);
 
         EditorHandler.RemoveBorders();
 		EditorHandler.EnableScrolling();
-		EditorHandler.AddDone(null);
+		EditorHandler.AddDone(null, false);
 
         PickerHandler.RemoveBorders();
         

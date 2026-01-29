@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net9.0-android;net9.0-ios</TargetFrameworks>
+		<TargetFrameworks>net10.0-android;net10.0-ios</TargetFrameworks>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>Plugin.Maui.Handlers.Sample</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -9,7 +9,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <NoWarn>1998,8632,8602,8601,8622,8618, 8603, 8600, 8604, 8602</NoWarn>
-		<MauiVersion>9.0.60</MauiVersion>
+		<MauiVersion>10.0.30</MauiVersion>
 
 		<!-- Display name -->
 		<ApplicationTitle>Plugin Handlers</ApplicationTitle>
@@ -28,7 +28,7 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">25.0</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net9.0-ios|AnyCPU'">
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net10.0-ios|AnyCPU'">
 		<MtouchLink>None</MtouchLink>
 	    <CreatePackage>false</CreatePackage>
 	</PropertyGroup>

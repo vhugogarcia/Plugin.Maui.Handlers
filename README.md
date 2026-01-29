@@ -36,7 +36,11 @@ EntryHandler.SetFieldCursorColor(Color.FromArgb("#000000"))
 
 // Adds a DONE button to the keyboard and sets toolbar background. Default color is #FFFFFF
 EntryHandler.AddDone(Color.FromArgb("#000000"));
-EditorHandler.AddDone(null);
+EditorHandler.AddDone();
+
+// Adds a DONE button with a transparent toolbar (iOS 26+ only)
+EntryHandler.AddDone(useTransparentToolbar: true);
+EditorHandler.AddDone(useTransparentToolbar: true);
 
 // Removes the borders from the editor control
 EditorHandler.RemoveBorders();
