@@ -21,6 +21,8 @@ It helps you to remove the unnecessary native UI elements of the mentioned contr
 | Remove Borders | ✅   | ✅   |     |
 | **Date Picker** |     |     |     |
 | Remove Borders | ✅   | ✅   |     |
+| **Time Picker** |     |     |     |
+| Remove Borders | ✅   | ✅   |     |
 | **Utilities** |     |     |     |
 | Hide Keyboard | ✅   | ✅   |     |
 | Disable WebView Bounce | ✅   |     |     |
@@ -50,6 +52,9 @@ PickerHandler.RemoveBorders();
 
 // Removes the borders from the date picker control
 DatePickerHandler.RemoveBorders();
+
+// Removes the borders from the time picker control
+TimePickerHandler.RemoveBorders();
 
 // Enables the vertical scrolling on the editor control
 EditorHandler.EnableScrolling();
