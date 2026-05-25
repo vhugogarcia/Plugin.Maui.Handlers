@@ -89,11 +89,25 @@
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="20" />
             </Border.StrokeShape>
-            <DatePicker 
+            <DatePicker
                 x:Name="datePicker"
                 MinimumDate="01/01/2025"
                 MaximumDate="12/31/2025"
                 Date="09/14/2025" />
+        </Border>
+
+        <Border
+            Stroke="#ededed"
+            StrokeThickness="4"
+            Background="#ededed"
+            Padding="16,8"
+            HorizontalOptions="Center">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20" />
+            </Border.StrokeShape>
+            <TimePicker
+                x:Name="timePicker"
+                Time="13:30:00" />
         </Border>
 
     </VerticalStackLayout>

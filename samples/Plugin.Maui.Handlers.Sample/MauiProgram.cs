@@ -29,6 +29,8 @@ public static class MauiProgram
         
         DatePickerHandler.RemoveBorders();
 
+        TimePickerHandler.RemoveBorders();
+
 		return builder.Build();
 	}
 }
