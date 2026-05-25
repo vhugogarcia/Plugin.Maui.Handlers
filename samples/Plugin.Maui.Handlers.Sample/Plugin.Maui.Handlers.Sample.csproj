@@ -10,6 +10,7 @@
         <Nullable>enable</Nullable>
         <NoWarn>1998,8632,8602,8601,8622,8618, 8603, 8600, 8604, 8602</NoWarn>
 		<MauiVersion>10.0.30</MauiVersion>
+        <ValidateXcodeVersion>false</ValidateXcodeVersion>
 
 		<!-- Display name -->
 		<ApplicationTitle>Plugin Handlers</ApplicationTitle>
